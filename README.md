@@ -29,10 +29,8 @@
 
 ## Installation
 
-### Clone the repo
-
 ```bash
-git  clone  https://github.com/yourname/fc-visor.git
+git clone  https://github.com/singh47/fc-visor.git
 
 cd  fc-visor
 
