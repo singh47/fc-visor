@@ -11,8 +11,6 @@
 
 - Fetch VM configuration and metrics (`/machine-config` and `/metrics`)
 
-- Live `top`-style TUI
-
 - Pluggable and lightweight
 
 ---
