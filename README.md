@@ -1,8 +1,7 @@
 
 # fc-visor
 
-**fc-visor** is a CLI tool for monitoring and inspecting [Firecracker](https://github.com/firecracker-microvm/firecracker) microVMs in real-time. It offers metrics, info, and a top-like dashboard via the Firecracker API socket.
-  
+**fc-visor** is a CLI tool for monitoring and inspecting [Firecracker](https://github.com/firecracker-microvm/firecracker) microVMs. It offers metrics, info, and a top-like dashboard (beta version) via the Firecracker API socket.
 
 ---
 
@@ -10,7 +9,7 @@
 
 - List running Firecracker VMs
 
-- Fetch VM configuration and metrics (`/vm` and `/metrics`)
+- Fetch VM configuration and metrics (`/machine-config` and `/metrics`)
 
 - Live `top`-style TUI
 
@@ -56,7 +55,7 @@ go  build  -o  fc-visor
 ```bash
 ./fc-visor metrics --socket /path/to/api.socket
 ```
-##### Run live top-like monitor
+##### Run live top-like monitor - (unstable - a beta feature)
 ```bash
 ./fc-visor top --socket /path/to/api.socket
 ```

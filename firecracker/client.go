@@ -38,7 +38,7 @@ func GetVMInfo(socketPath string) (*VMInfo, error) {
 		Timeout: 2 * time.Second,
 	}
 
-	req, err := http.NewRequest("GET", "http://unix/vm", nil)
+	req, err := http.NewRequest("GET", "http://unix/machine-config", nil)
 	if err != nil {
 		return nil, err
 	}
@@ -87,7 +87,7 @@ func GetVMMetrics(socketPath string) (*VMMetrics, error) {
 
 	if resp.StatusCode != 200 {
 		dump, _ := httputil.DumpResponse(resp, true)
-		return nil, fmt.Errorf("unexpected response: %s", dump)
+		return nil, fmt.Errorf("unexpected response or metrics are not enabled in vm: %s", dump)
 	}
 
 	var metrics VMMetrics
